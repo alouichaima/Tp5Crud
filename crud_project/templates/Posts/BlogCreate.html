@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Blog Post</title>
+</head>
+<body>
+    <h1>Create Blog Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Django génère automatiquement les champs du formulaire -->
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'crud_project:blog_list' %}">Back to Blog List</a>
+</body>
+</html>
